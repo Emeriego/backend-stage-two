@@ -1,6 +1,6 @@
 const sequelize = require('../config/db');
-const User = require('./user');
-const Organisation = require('./organisation');
+const User = require('./User');
+const Organisation = require('./Organisation');
 
 User.belongsToMany(Organisation, { through: 'UserOrganisation', as: 'Organisations' });
 Organisation.belongsToMany(User, { through: 'UserOrganisation', as: 'Users' });
